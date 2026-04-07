@@ -1,0 +1,17 @@
+<process name="myVehicleSaving" start="Vehicle"
+processClass="org.training.core.model.VehicleSavingProcessModel" onError="error">
+    <action id="Vehicle" bean="Vehicle">
+        <trasition name="OK" to = "Bike"/>
+        <trasition name="NOK" to ="Car"/>
+    </action>
+    <action id="Bike" bean="Bike">
+        <trasition name="OK" to="success"/>
+        <trasition name="NOK" to="error"/>
+	</action>
+	<action id="Car" bean="Car">
+		<trasition name="OK" to="success"/>
+		<trasition name="OK" to="error"/>
+	</action>
+	<end id="success" state="SUCCESS">Successfully Saved!!!!</end>
+	<end id="error" state="ERROR">Not Saved!!!</end>
+</process>

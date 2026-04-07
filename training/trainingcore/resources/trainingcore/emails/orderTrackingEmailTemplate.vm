@@ -1,0 +1,8 @@
+Dear Customer,
+
+Your order is being tracked.
+
+Email: ${process.email}
+
+Thanks,
+The Team

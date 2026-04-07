@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://www.hybris.com/cockpit/config"
+        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea"
+        xmlns:list-view="http://www.hybris.com/cockpitng/component/listView"
+        xmlns:advanced-search="http://www.hybris.com/cockpitng/config/advancedsearch"
+        xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+
+    <!-- Advanced Search -->
+    <context type="OrderTrackingEmailProcess" component="advanced-search"
+             merge-by="type">
+        <advanced-search:advanced-search>
+            <advanced-search:field-list>
+                <advanced-search:field name="code" selected="true"/>
+                <advanced-search:field name="email" selected="true"/>
+                <advanced-search:field name="fullname" selected="true"/>
+                <advanced-search:field name="state" selected="true"/>
+            </advanced-search:field-list>
+        </advanced-search:advanced-search>
+    </context>
+
+    <!-- List View -->
+    <context type="OrderTrackingEmailProcess" component="listview"
+             merge-by="type">
+        <list-view:list-view>
+            <list-view:column qualifier="code"/>
+            <list-view:column qualifier="email"/>
+            <list-view:column qualifier="fullname"/>
+            <list-view:column qualifier="state"/>
+        </list-view:list-view>
+    </context>
+
+    <!-- Editor Area -->
+    <context type="OrderTrackingEmailProcess" component="editor-area"
+             merge-by="type">
+        <editorArea:editorArea>
+            <editorArea:essentials>
+                <editorArea:essentialSection name="hmc.essential">
+                    <editorArea:attribute qualifier="code" readonly="true"/>
+                    <editorArea:attribute qualifier="email"/>
+                    <editorArea:attribute qualifier="state" readonly="true"/>
+                </editorArea:essentialSection>
+            </editorArea:essentials>
+            <editorArea:tab name="training.tab.tracking">
+                <editorArea:section name="training.section.trackingdetails">
+                    <editorArea:attribute qualifier="code" readonly="true"/>
+                    <editorArea:attribute qualifier="email"/>
+                    <editorArea:attribute qualifier="fullname"/>
+                    <editorArea:attribute qualifier="frontendTemplateName"/>
+                    <editorArea:attribute qualifier="state" readonly="true"/>
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+
+    <!-- Explorer Tree -->
+    <context merge-by="module" component="explorer-tree">
+        <explorer-tree:explorer-tree>
+            <explorer-tree:navigation-node id="hmc_treenode_order"
+                                           merge-mode="append">
+                <explorer-tree:type-node id="hmc.ordertracking"
+                                         code="OrderTrackingEmailProcess"/>
+            </explorer-tree:navigation-node>
+        </explorer-tree:explorer-tree>
+    </context>
+
+</config>

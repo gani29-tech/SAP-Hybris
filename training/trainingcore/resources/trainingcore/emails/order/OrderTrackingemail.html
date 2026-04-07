@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Order Tracking Notification</h1>
+    </div>
+    <div class="content">
+        <p>Dear Customer,</p>
+        <p>Thank you for your order. Here are your tracking details:</p>
+
+        <table width="100%" cellpadding="8" cellspacing="0" border="1" style="border-collapse:collapse;">
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>${emailProcessModel.email}</td>
+            </tr>
+            <tr>
+                <td><strong>Process Name</strong></td>
+                <td>${emailProcessModel.name}</td>
+            </tr>
+            <tr>
+                <td><strong>Site</strong></td>
+                <td>${emailProcessModel.site.uid}</td>
+            </tr>
+            <tr>
+                <td><strong>Store</strong></td>
+                <td>${emailProcessModel.store.uid}</td>
+            </tr>
+        </table>
+
+        <br/>
+        <a href="#" class="button">Track Your Order</a>
+    </div>
+    <div class="footer">
+        <p>This is an automated email. Please do not reply.</p>
+        <p>&copy; 2026 Apparel UK. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>

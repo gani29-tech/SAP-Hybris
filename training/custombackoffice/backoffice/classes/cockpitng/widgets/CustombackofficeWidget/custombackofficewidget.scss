@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "./support/custombackofficewidget-variables.scss";
+
+.yw-labelstyle
+{
+	color: $custombackoffice-label-text-color;
+}
+
+.custombackoffice-container {
+	background: $custombackoffice-container-background;
+	font-family: $custombackoffice-container-font-family;
+	font-size: $custombackoffice-container-font-size;
+}

@@ -1,0 +1,9 @@
+$contentCatalog=electronicsContentCatalog
+$contentVersion=Staged
+$contentCV=catalogVersion(catalog(id[default=$contentCatalog]),version[default=$contentVersion])
+
+INSERT_UPDATE PageTemplate ; $contentCV[unique=true] ; uid[unique=true]              ; name                        ; frontendTemplateName          ; restrictedPageTypes(code) ; active
+                           ;                         ; orderTrackingEmailTemplate    ; Order Tracking Email Template ; orderTrackingEmailTemplate   ; EmailPage                 ; true
+
+INSERT_UPDATE EmailPage ; $contentCV[unique=true] ; uid[unique=true]              ; name                      ; masterTemplate(uid,$contentCV)  ; approvalStatus(code) ; defaultPage
+                        ;                         ; orderTrackingEmailPage        ; Order Tracking Email Page  ; orderTrackingEmailTemplate      ; approved             ; true

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="C:\SAPHybris\SAP44\Saphybris\hybris\bin\custom\training\custombackoffice/backoffice/classes" />
+  </classpath>
+</application>
